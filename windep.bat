@@ -1,0 +1,3 @@
+if not exist WinReleaseBins mkdir WinReleaseBins
+copy /Y EmployeesDIR\build\Desktop_Qt_6_11_1_MinGW_64_bit_Release\EmployeesDIR.exe WinReleaseBins\EmployeesDIR.exe
+windeployqt WinReleaseBins/EmployeesDIR.exe

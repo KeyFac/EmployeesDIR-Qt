@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.16)
 
 project(EmployeesDIR VERSION 0.1 LANGUAGES CXX)
 
@@ -13,8 +13,6 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
 
 set(TS_FILES EmployeesDIR_en_001.ts)
-#set(TS_FILES EmployeesDIR_zh_cn.ts)
-
 
 set(PROJECT_SOURCES
         main.cpp

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsForm</class>
+ <widget class="QDialog" name="SettingsForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>350</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <!-- Update group -->
+   <item>
+    <widget class="QGroupBox" name="updateGroup">
+     <property name="title">
+      <string>Update</string>
+     </property>
+     <layout class="QVBoxLayout" name="updateLayout">
+      <item>
+       <widget class="QCheckBox" name="checkUpdateBox">
+        <property name="text">
+         <string>Check updates when starting</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="sourceRow">
+        <item>
+         <widget class="QLabel" name="sourceLabel">
+          <property name="text">
+           <string>Download Source</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="downloadComboBox"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="checkUpdateButton">
+          <property name="text">
+           <string>Check Now</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="sourceSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <!-- Language group -->
+   <item>
+    <widget class="QGroupBox" name="languageGroup">
+     <property name="title">
+      <string>Language</string>
+     </property>
+     <layout class="QVBoxLayout" name="languageLayout">
+      <item>
+       <widget class="QComboBox" name="languageComboBox"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <!-- Database group -->
+   <item>
+    <widget class="QGroupBox" name="dbGroup">
+     <property name="title">
+      <string>Database</string>
+     </property>
+     <layout class="QVBoxLayout" name="dbLayout">
+      <item>
+       <layout class="QHBoxLayout" name="usingRow">
+        <item>
+         <widget class="QLabel" name="usingLabel">
+          <property name="text">
+           <string>Using:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="dbTypeLabel">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="usingSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="dbSetButton">
+        <property name="text">
+         <string>Database Settings</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="mainSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>10</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <!-- Bottom buttons -->
+   <item>
+    <layout class="QHBoxLayout" name="bottomButtons">
+     <item>
+      <spacer name="bottomSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="OKButton">
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -14,42 +14,31 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Qt 6.8
+      - name: Install Qt 6.8 (MSVC)
         uses: jurplel/install-qt-action@v4
         with:
           version: "6.8.*"
           host: windows
           target: desktop
-          arch: win64_mingw
+          arch: win64_msvc2022_64
           cache: true
 
       - name: Configure CMake
         working-directory: EmployeesDIR
-        shell: cmd
         run: |
-          set "MINGW_DIR=%QT_ROOT_DIR%\..\..\Tools\mingw1310_64"
-          set "PATH=%MINGW_DIR%\bin;%QT_ROOT_DIR%\bin;%PATH%"
-          rmdir /s /q build 2>nul
-          cmake -B build ^
-            -DCMAKE_BUILD_TYPE=Release ^
-            -DCMAKE_CXX_COMPILER="%MINGW_DIR%\bin\g++.exe" ^
-            -DCMAKE_C_COMPILER="%MINGW_DIR%\bin\gcc.exe" ^
-            -G "MinGW Makefiles"
+          cmake -B build -DCMAKE_BUILD_TYPE=Release
 
       - name: Build
         working-directory: EmployeesDIR
-        shell: cmd
-        run: |
-          set "PATH=%QT_ROOT_DIR%\..\..\Tools\mingw1310_64\bin;%QT_ROOT_DIR%\bin;%PATH%"
-          cmake --build build --parallel
+        run: cmake --build build --config Release --parallel
 
       - name: Deploy
         working-directory: EmployeesDIR
         shell: cmd
         run: |
-          set "PATH=%QT_ROOT_DIR%\..\..\Tools\mingw1310_64\bin;%QT_ROOT_DIR%\bin;%PATH%"
+          set "PATH=%QT_ROOT_DIR%\bin;%PATH%"
           mkdir ..\deploy 2>nul
-          copy /Y build\EmployeesDIR.exe ..\deploy\
+          copy /Y build\Release\EmployeesDIR.exe ..\deploy\
           copy /Y config.ini ..\deploy\
           if not exist ..\deploy\i18n mkdir ..\deploy\i18n
           copy /Y EmployeesDIR_en_US.qm ..\deploy\i18n\

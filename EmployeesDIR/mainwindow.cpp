@@ -69,7 +69,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::retranslateUi()
 {
-    // Append ":" to field titles — ui text is just the base key
+    // Let the auto-generated retranslateUi handle menus, actions, buttons etc.
+    ui->retranslateUi(this);
+
+    // Override field titles with ":" appended
     ui->m_nameTitle->setText(tr("name") + ":");
     ui->m_sexTitle->setText(tr("sex") + ":");
     ui->m_numberTitle->setText(tr("number") + ":");
@@ -78,7 +81,7 @@ void MainWindow::retranslateUi()
     ui->m_eduTitle->setText(tr("edu") + ":");
     ui->m_salaryTitle->setText(tr("salary") + ":");
 
-    setWindowTitle(QStringLiteral("EmployeesDIR - 3.1"));
+    //setWindowTitle(QStringLiteral("EmployeesDIR - 3.1"));
 }
 
 void MainWindow::flushWindow()
@@ -305,6 +308,6 @@ void MainWindow::onAbout()
 {
     QMessageBox::about(this, QString(),
         QStringLiteral("EmployeesDIR\n"
-                       "Version 3.1\n"
-                       "Copyright \302\251 2024 GLgele"));
+                       "Version 4.0\n"
+                       "Copyright \251 2024-2026 KeyFac"));
 }

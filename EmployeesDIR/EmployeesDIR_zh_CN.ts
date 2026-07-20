@@ -19,7 +19,7 @@
         <location filename="dbconnectform.ui" line="60"/>
         <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_dbconnectform.h" line="168"/>
         <source>SQLite</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="dbconnectform.ui" line="68"/>
@@ -43,7 +43,7 @@
         <location filename="dbconnectform.ui" line="109"/>
         <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_dbconnectform.h" line="170"/>
         <source>MySQL</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="dbconnectform.ui" line="115"/>
@@ -64,14 +64,8 @@
         <translation>确认</translation>
     </message>
     <message>
-        <location filename="dbconnectform.cpp" line="41"/>
         <source>Choose SQLite database</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="dbconnectform.cpp" line="43"/>
-        <source>SQLite database files (*.db *.sqlite);;All files (*.*)</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">选择SQLite数据库</translation>
     </message>
 </context>
 <context>
@@ -110,205 +104,192 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="mainwindow.ui" line="368"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="410"/>
+        <location filename="mainwindow.ui" line="492"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="466"/>
         <source>File</source>
         <translation>文件</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="379"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="411"/>
+        <location filename="mainwindow.ui" line="503"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="467"/>
         <source>Operations</source>
         <translation>操作</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="387"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="412"/>
+        <location filename="mainwindow.ui" line="511"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="468"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="403"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="380"/>
+        <location filename="mainwindow.ui" line="531"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="436"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="408"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="381"/>
+        <location filename="mainwindow.ui" line="536"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="437"/>
         <source>Open</source>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="413"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="382"/>
+        <location filename="mainwindow.ui" line="541"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="438"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="418"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="383"/>
+        <location filename="mainwindow.ui" line="546"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="439"/>
         <source>Exit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="423"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="384"/>
+        <location filename="mainwindow.ui" line="551"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="440"/>
         <source>New Employee</source>
         <translation>新员工</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="428"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="385"/>
+        <location filename="mainwindow.ui" line="556"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="441"/>
         <source>Edit Info</source>
         <translation>编辑员工信息</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="433"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="386"/>
+        <location filename="mainwindow.ui" line="561"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="442"/>
         <source>Delete Employee</source>
         <translation>删除该员工</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="438"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="387"/>
+        <location filename="mainwindow.ui" line="566"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="443"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="393"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="413"/>
+        <location filename="mainwindow.ui" line="517"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="469"/>
         <source>Debug</source>
-        <translation>调试</translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="443"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="388"/>
+        <location filename="mainwindow.ui" line="20"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="435"/>
+        <source>EmployeesDIR - 4.0</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="571"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="444"/>
         <source>Test Debug</source>
-        <translation>测试调试</translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="448"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="389"/>
+        <location filename="mainwindow.ui" line="576"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="445"/>
         <source>Error Form Debug</source>
-        <translation>错误窗口调试</translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="453"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="390"/>
+        <location filename="mainwindow.ui" line="581"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="446"/>
         <source>DB Connect Debug</source>
-        <translation>数据库连接调试</translation>
+        <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="51"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="391"/>
-        <location filename="mainwindow.cpp" line="73"/>
+        <location filename="mainwindow.ui" line="50"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="447"/>
         <source>name</source>
         <translation>姓名</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="20"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="379"/>
-        <source>EmployeesDIR - 3.1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="mainwindow.ui" line="86"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="393"/>
-        <location filename="mainwindow.cpp" line="74"/>
+        <location filename="mainwindow.ui" line="103"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="449"/>
         <source>sex</source>
         <translation>性别</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="121"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="395"/>
-        <location filename="mainwindow.cpp" line="75"/>
+        <location filename="mainwindow.ui" line="156"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="451"/>
         <source>number</source>
         <translation>电话</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="156"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="397"/>
-        <location filename="mainwindow.cpp" line="76"/>
+        <location filename="mainwindow.ui" line="209"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="453"/>
         <source>comment</source>
         <translation>备注</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="191"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="399"/>
-        <location filename="mainwindow.cpp" line="77"/>
+        <location filename="mainwindow.ui" line="262"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="455"/>
         <source>email</source>
         <translation>E-mail</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="226"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="401"/>
-        <location filename="mainwindow.cpp" line="78"/>
+        <location filename="mainwindow.ui" line="315"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="457"/>
         <source>edu</source>
         <translation>学历</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="261"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="403"/>
-        <location filename="mainwindow.cpp" line="79"/>
+        <location filename="mainwindow.ui" line="368"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="459"/>
         <source>salary</source>
         <translation>薪水</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="317"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="405"/>
+        <location filename="mainwindow.ui" line="441"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="461"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="324"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="406"/>
+        <location filename="mainwindow.ui" line="448"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="462"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="331"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="407"/>
+        <location filename="mainwindow.ui" line="455"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="463"/>
         <source>New</source>
         <translation>新员工</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="338"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="408"/>
+        <location filename="mainwindow.ui" line="462"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="464"/>
         <source>Confirm</source>
         <translation>确认</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="345"/>
-        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="409"/>
+        <location filename="mainwindow.ui" line="469"/>
+        <location filename="build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/EmployeesDIR_autogen/include/ui_mainwindow.h" line="465"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="31"/>
         <source>Really want to exit?</source>
-        <translation>确认退出吗？可能有未保存的数据</translation>
+        <translation type="vanished">确认退出吗？可能有未保存的数据</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="155"/>
         <source>Really want to delete: </source>
-        <translation>确认删除员工：</translation>
+        <translation type="vanished">确认删除员工：</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="272"/>
         <source>Save Employees</source>
-        <translation>保存员工数据</translation>
+        <translation type="vanished">保存员工数据</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="282"/>
         <source>Open Employees</source>
-        <translation>打开员工数据</translation>
+        <translation type="vanished">打开员工数据</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="274"/>
-        <location filename="mainwindow.cpp" line="284"/>
         <source>Employees (*.employees);;All files (*.*)</source>
-        <translation>员工文件 (*.employees);;所有文件 (*.*)</translation>
+        <translation type="vanished">员工文件 (*.employees);;所有文件 (*.*)</translation>
     </message>
 </context>
 <context>
@@ -350,14 +331,12 @@
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="settingsform.cpp" line="15"/>
         <source>Chinese</source>
-        <translation>中文</translation>
+        <translation type="vanished">中文</translation>
     </message>
     <message>
-        <location filename="settingsform.cpp" line="16"/>
         <source>English</source>
-        <translation>英语</translation>
+        <translation type="vanished">英语</translation>
     </message>
     <message>
         <location filename="settingsform.ui" line="91"/>

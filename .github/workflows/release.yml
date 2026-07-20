@@ -45,6 +45,11 @@ jobs:
           copy /Y EmployeesDIR_zh_CN.qm ..\deploy\i18n\
           windeployqt --release ..\deploy\EmployeesDIR.exe
 
+      - name: Package
+        shell: cmd
+        run: |
+          tar -acf EmployeesDIR-%GITHUB_REF_NAME%.zip -C deploy .
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         if: always()
@@ -56,7 +61,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: deploy/**
+          files: EmployeesDIR-${{ github.ref_name }}.zip
           name: EmployeesDIR ${{ github.ref_name }}
           draft: false
           prerelease: false

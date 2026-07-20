@@ -48,7 +48,9 @@ jobs:
       - name: Package
         shell: cmd
         run: |
-          tar -acf EmployeesDIR-%GITHUB_REF_NAME%.zip -C deploy .
+          cd deploy
+          7z a -tzip ..\EmployeesDIR-%GITHUB_REF_NAME%.zip *
+          cd ..
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4

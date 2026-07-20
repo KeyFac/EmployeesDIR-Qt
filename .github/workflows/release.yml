@@ -1,0 +1,70 @@
+name: Build & Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Qt 6.11
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: "6.11.*"
+          host: windows
+          target: desktop
+          arch: win64_mingw
+          modules: qtlinguist
+          cache: true
+
+      - name: Setup MinGW
+        uses: egor-tensin/setup-mingw@v2
+        with:
+          platform: x86_64
+
+      - name: Configure CMake
+        working-directory: EmployeesDIR
+        run: |
+          cmake -B build `
+            -DCMAKE_BUILD_TYPE=Release `
+            -DCMAKE_CXX_COMPILER=g++ `
+            -DCMAKE_C_COMPILER=gcc `
+            -G "MinGW Makefiles"
+
+      - name: Build
+        working-directory: EmployeesDIR
+        run: cmake --build build --parallel
+
+      - name: Deploy
+        working-directory: EmployeesDIR
+        run: |
+          mkdir ..\deploy
+          copy /Y build\EmployeesDIR.exe ..\deploy\
+          copy /Y config.ini ..\deploy\
+          if not exist ..\deploy\i18n mkdir ..\deploy\i18n
+          copy /Y EmployeesDIR_en_US.qm ..\deploy\i18n\
+          copy /Y EmployeesDIR_zh_CN.qm ..\deploy\i18n\
+          windeployqt --release ..\deploy\EmployeesDIR.exe
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: EmployeesDIR-${{ github.ref_name }}
+          path: deploy/
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: deploy/**
+          name: EmployeesDIR ${{ github.ref_name }}
+          draft: false
+          prerelease: false

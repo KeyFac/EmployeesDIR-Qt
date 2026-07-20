@@ -27,25 +27,24 @@ jobs:
         working-directory: EmployeesDIR
         shell: cmd
         run: |
-          set "PATH=%QT_ROOT_DIR%\bin;%PATH%"
+          set "PATH=%QT_ROOT_DIR%\..\..\Tools\mingw1310_64\bin;%QT_ROOT_DIR%\bin;%PATH%"
+          where g++
           cmake -B build ^
             -DCMAKE_BUILD_TYPE=Release ^
-            -DCMAKE_CXX_COMPILER=%QT_ROOT_DIR%/bin/g++ ^
-            -DCMAKE_C_COMPILER=%QT_ROOT_DIR%/bin/gcc ^
             -G "MinGW Makefiles"
 
       - name: Build
         working-directory: EmployeesDIR
         shell: cmd
         run: |
-          set "PATH=%QT_ROOT_DIR%\bin;%PATH%"
+          set "PATH=%QT_ROOT_DIR%\..\..\Tools\mingw1310_64\bin;%QT_ROOT_DIR%\bin;%PATH%"
           cmake --build build --parallel
 
       - name: Deploy
         working-directory: EmployeesDIR
         shell: cmd
         run: |
-          set "PATH=%QT_ROOT_DIR%\bin;%PATH%"
+          set "PATH=%QT_ROOT_DIR%\..\..\Tools\mingw1310_64\bin;%QT_ROOT_DIR%\bin;%PATH%"
           mkdir ..\deploy 2>nul
           copy /Y build\EmployeesDIR.exe ..\deploy\
           copy /Y config.ini ..\deploy\

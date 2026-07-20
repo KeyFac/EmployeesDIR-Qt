@@ -27,10 +27,13 @@ jobs:
         working-directory: EmployeesDIR
         shell: cmd
         run: |
-          set "PATH=%QT_ROOT_DIR%\..\..\Tools\mingw1310_64\bin;%QT_ROOT_DIR%\bin;%PATH%"
-          where g++
+          set "MINGW_DIR=%QT_ROOT_DIR%\..\..\Tools\mingw1310_64"
+          set "PATH=%MINGW_DIR%\bin;%QT_ROOT_DIR%\bin;%PATH%"
+          rmdir /s /q build 2>nul
           cmake -B build ^
             -DCMAKE_BUILD_TYPE=Release ^
+            -DCMAKE_CXX_COMPILER="%MINGW_DIR%\bin\g++.exe" ^
+            -DCMAKE_C_COMPILER="%MINGW_DIR%\bin\gcc.exe" ^
             -G "MinGW Makefiles"
 
       - name: Build

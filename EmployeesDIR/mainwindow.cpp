@@ -107,13 +107,13 @@ void MainWindow::onEmployeeSelected(int row)
 
     const auto &emp = EmployeeList::employees[row];
     QStringList info = emp.getInfo();
-    ui->m_nameLabel->setText(ui->m_nameTitle->text() + " " + info[0]);
-    ui->m_sexLabel->setText(ui->m_sexTitle->text() + " " + info[1]);
-    ui->m_numberLabel->setText(ui->m_numberTitle->text() + " " + info[2]);
-    ui->m_commentLabel->setText(ui->m_commentTitle->text() + " " + info[3]);
-    ui->m_emailLabel->setText(ui->m_emailTitle->text() + " " + info[4]);
-    ui->m_eduLabel->setText(ui->m_eduTitle->text() + " " + info[5]);
-    ui->m_salaryLabel->setText(ui->m_salaryTitle->text() + " " + info[6]);
+    ui->m_nameLabel->setText(info[0]);
+    ui->m_sexLabel->setText(info[1]);
+    ui->m_numberLabel->setText(info[2]);
+    ui->m_commentLabel->setText(info[3]);
+    ui->m_emailLabel->setText(info[4]);
+    ui->m_eduLabel->setText(info[5]);
+    ui->m_salaryLabel->setText(info[6]);
 
     ui->m_editBtn->setFocus();
 }

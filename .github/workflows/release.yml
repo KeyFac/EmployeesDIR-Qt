@@ -27,28 +27,31 @@ jobs:
         working-directory: EmployeesDIR
         shell: cmd
         run: |
+          set "PATH=%QT_ROOT_DIR%\bin;%PATH%"
           cmake -B build ^
             -DCMAKE_BUILD_TYPE=Release ^
-            -DCMAKE_CXX_COMPILER=g++ ^
-            -DCMAKE_C_COMPILER=gcc ^
+            -DCMAKE_CXX_COMPILER=%QT_ROOT_DIR%/bin/g++ ^
+            -DCMAKE_C_COMPILER=%QT_ROOT_DIR%/bin/gcc ^
             -G "MinGW Makefiles"
 
       - name: Build
         working-directory: EmployeesDIR
         shell: cmd
-        run: cmake --build build --parallel
+        run: |
+          set "PATH=%QT_ROOT_DIR%\bin;%PATH%"
+          cmake --build build --parallel
 
       - name: Deploy
         working-directory: EmployeesDIR
         shell: cmd
         run: |
+          set "PATH=%QT_ROOT_DIR%\bin;%PATH%"
           mkdir ..\deploy 2>nul
           copy /Y build\EmployeesDIR.exe ..\deploy\
           copy /Y config.ini ..\deploy\
           if not exist ..\deploy\i18n mkdir ..\deploy\i18n
           copy /Y EmployeesDIR_en_US.qm ..\deploy\i18n\
           copy /Y EmployeesDIR_zh_CN.qm ..\deploy\i18n\
-          set PATH=%PATH%;D:\a\EmployeesDIR-Qt\Qt\6.8.3\mingw_64\bin
           windeployqt --release ..\deploy\EmployeesDIR.exe
 
       - name: Upload artifact

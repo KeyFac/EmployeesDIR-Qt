@@ -14,10 +14,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Qt 6.11
+      - name: Install Qt 6.8
         uses: jurplel/install-qt-action@v4
         with:
-          version: "6.11.*"
+          version: "6.8.*"
           host: windows
           target: desktop
           arch: win64_mingw
@@ -31,21 +31,24 @@ jobs:
 
       - name: Configure CMake
         working-directory: EmployeesDIR
+        shell: cmd
         run: |
-          cmake -B build `
-            -DCMAKE_BUILD_TYPE=Release `
-            -DCMAKE_CXX_COMPILER=g++ `
-            -DCMAKE_C_COMPILER=gcc `
+          cmake -B build ^
+            -DCMAKE_BUILD_TYPE=Release ^
+            -DCMAKE_CXX_COMPILER=g++ ^
+            -DCMAKE_C_COMPILER=gcc ^
             -G "MinGW Makefiles"
 
       - name: Build
         working-directory: EmployeesDIR
+        shell: cmd
         run: cmake --build build --parallel
 
       - name: Deploy
         working-directory: EmployeesDIR
+        shell: cmd
         run: |
-          mkdir ..\deploy
+          mkdir ..\deploy 2>nul
           copy /Y build\EmployeesDIR.exe ..\deploy\
           copy /Y config.ini ..\deploy\
           if not exist ..\deploy\i18n mkdir ..\deploy\i18n

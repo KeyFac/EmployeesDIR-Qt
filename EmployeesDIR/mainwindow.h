@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QCloseEvent>
 
 namespace Ui { class MainWindow; }
 
@@ -28,6 +29,9 @@ private slots:
     void onOpen();
     void onSettings();
     void onAbout();
+
+protected:
+    void closeEvent(QCloseEvent *event) override;
 
 private:
     void flushWindow();

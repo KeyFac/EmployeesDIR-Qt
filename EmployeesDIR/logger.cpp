@@ -33,6 +33,7 @@ Logger::Logger()
     QString logPath = logDir + "/" + QDateTime::currentDateTime().toString("yyyyMMdd") + ".log";
     m_logFile.setFileName(logPath);
     if (m_logFile.open(QIODevice::Append | QIODevice::Text)) {
+        g_logger = this;
         qInstallMessageHandler(messageHandlerForward);
     }
 

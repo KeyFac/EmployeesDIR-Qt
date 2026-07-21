@@ -28,8 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionOpen, &QAction::triggered, this, &MainWindow::onOpen);
     connect(ui->actionSettings, &QAction::triggered, this, &MainWindow::onSettings);
     connect(ui->actionExit, &QAction::triggered, this, [this]() {
-        if (QMessageBox::question(this, QString(), tr("Really want to exit?")) == QMessageBox::Yes)
-            QApplication::quit();
+        close();
     });
     connect(ui->actionNewEmployee, &QAction::triggered, this, &MainWindow::onNewClicked);
     connect(ui->actionEditInfo, &QAction::triggered, this, &MainWindow::onEditClicked);
@@ -88,8 +87,8 @@ void MainWindow::flushWindow()
 {
     ui->m_listWidget->blockSignals(true);
     ui->m_listWidget->clear();
-    for (const auto &emp : EmployeeList::employees)
-        ui->m_listWidget->addItem(emp.getInfo()[0]);
+    for (const auto &emp : std::as_const(EmployeeList::employees))
+        ui->m_listWidget->addItem(emp.getInfo().at(0));
     ui->m_listWidget->blockSignals(false);
 
     ui->m_nameLabel->clear();
@@ -302,6 +301,14 @@ void MainWindow::onSettings()
     });
     form->setAttribute(Qt::WA_DeleteOnClose);
     form->show();
+}
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    if (QMessageBox::question(this, QString(), tr("Really want to exit?")) == QMessageBox::Yes)
+        event->accept();
+    else
+        event->ignore();
 }
 
 void MainWindow::onAbout()
